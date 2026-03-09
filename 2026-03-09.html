@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日日报 - 2026-03-09</title>
+<style>
+:root{--bg:#f0f2f5;--card:#fff;--title:#1a1a2e;--text:#444;--text2:#555;--text3:#888;--nav-bg:#fff;--nav-shadow:rgba(0,0,0,.1);--nav-link:#555;--nav-link-bg:#e2e8f0;--nav-link-hover:#cbd5e1;--nav-active:#1a1a2e;--sec-bg:#2d3436;--card-shadow:rgba(0,0,0,.08);--card-hover:rgba(0,0,0,.12);--img-bg:#e8eaed;--btn-bg:#1a1a2e;--tab-bg:#e2e8f0;--tab-active:#1a1a2e;--tab-text:#555;--tab-active-text:#fff}
+[data-theme="dark"]{--bg:#1a1a2e;--card:#2d2d44;--title:#f0f0f8;--text:#c8c8d8;--text2:#e4e4f0;--text3:#a0a0b8;--nav-bg:#22223a;--nav-shadow:rgba(0,0,0,.3);--nav-link:#b0b0c8;--nav-link-bg:#33334d;--nav-link-hover:#44446a;--nav-active:#6c63ff;--sec-bg:#6c63ff;--card-shadow:rgba(0,0,0,.2);--card-hover:rgba(0,0,0,.35);--img-bg:#33334d;--btn-bg:#6c63ff;--tab-bg:#33334d;--tab-active:#6c63ff;--tab-text:#b0b0c8;--tab-active-text:#fff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);padding:20px;padding-top:56px;max-width:1400px;margin:0 auto;transition:background .3s,color .3s}
+.hd{text-align:center;padding:16px 0 8px}
+.hd h1{font-size:22px;color:var(--title)}
+.hd .st{color:var(--text);font-size:14px;margin-top:6px}
+.sec{background:var(--sec-bg);color:#fff;padding:12px 20px;border-radius:8px;margin:20px 0 14px;font-size:17px;font-weight:600}
+.g{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.c{background:var(--card);border-radius:10px;overflow:hidden;box-shadow:0 2px 6px var(--card-shadow);transition:transform .2s,box-shadow .2s,background .3s}
+.c:hover{transform:translateY(-3px);box-shadow:0 6px 16px var(--card-hover)}
+.c>a{display:block;text-decoration:none;color:inherit}
+.iw{position:relative;width:100%;padding-top:62%;background:var(--img-bg);overflow:hidden}
+.iw img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover}
+.bd{position:absolute;top:8px;left:8px;background:#10b981;color:#fff;font-size:11px;font-weight:700;padding:3px 8px;border-radius:4px;z-index:1}
+.cb{padding:10px 12px 12px}
+.ct{font-size:13px;font-weight:600;line-height:1.4;color:var(--title);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:5px}
+.cz{font-size:12px;color:var(--text2);line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:5px}
+.cs{font-size:11px;color:var(--text3)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--nav-bg);box-shadow:0 2px 8px var(--nav-shadow);text-align:center;padding:10px 0;display:flex;align-items:center;justify-content:center;gap:6px;transition:background .3s}
+.nav span{font-size:14px;color:var(--text)}
+.nav a{display:inline-block;padding:5px 12px;margin:2px 3px;border-radius:16px;font-size:13px;text-decoration:none;color:var(--nav-link);background:var(--nav-link-bg);transition:all .2s}
+.nav a:hover{background:var(--nav-link-hover)}
+.nav a.cur{background:var(--nav-active);color:#fff}
+.theme-btn{background:none;border:none;font-size:18px;cursor:pointer;padding:4px 8px;border-radius:8px;transition:background .2s}
+.theme-btn:hover{background:var(--nav-link-bg)}
+.tabs{display:flex;justify-content:center;gap:0;margin:16px auto 8px;background:var(--tab-bg);border-radius:12px;padding:4px;max-width:280px}
+.tabs button{flex:1;padding:8px 20px;border:none;border-radius:10px;font-size:15px;font-weight:600;cursor:pointer;background:transparent;color:var(--tab-text);transition:all .2s}
+.tabs button.active{background:var(--tab-active);color:var(--tab-active-text);box-shadow:0 2px 6px rgba(0,0,0,.15)}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+.ph{position:absolute;top:0;left:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;padding:14px;text-align:center;line-height:1.3}
+.top-btn{position:fixed;bottom:24px;right:24px;z-index:100;width:42px;height:42px;border-radius:50%;background:var(--btn-bg);color:#fff;border:none;font-size:20px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.2);display:none;align-items:center;justify-content:center;transition:opacity .2s,background .3s}
+.top-btn:hover{opacity:.85}
+@media(max-width:900px){.g{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){.g{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<div class="nav"><span>📅 历史日报:</span> <a href="2026-03-09.html?v=1773021363" class="cur">03-09</a> <a href="2026-03-06.html?v=1773021363">03-06</a> <a href="2026-03-05.html?v=1773021363">03-05</a> <a href="2026-03-04.html?v=1773021363">03-04</a> <button class="theme-btn" id="themeIcon" onclick="_toggleTheme()">☀️</button></div>
+<div class="hd">
+<h1>Daily News - 2026-03-09</h1>
+<p class="st">Audio 21 | AI 3 | FREE 4</p>
+</div>
+<div class="tabs">
+<button class="active" onclick="_switchTab('audio',this)">Audio</button>
+<button onclick="_switchTab('ai',this)">AI</button>
+</div>
+<div id="tab-audio" class="tab-panel active">
+<div class="sec">FREE</div>
+<div class="g">
+<div class="c"><a href="https://www.midifan.com/modulenews-detailview-58277.htm" target="_blank"><div class="iw"><span class="bd">FREE</span><img src="https://image.midifan.com/data/attach/album/2026/0309/3859_1773003917_thumb.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="ph" style="display:none;background:#0ea5e9;color:#fff">限免福利：SampleScience 限时免费送出 Da Vinyl Box 采样包和 VHS Waves 插件</div></div><div class="cb"><div class="ct">限免福利：SampleScience 限时免费送出 Da Vinyl Box 采样包和 VHS Waves 插件</div><div class="cz">限免福利：SampleScience 限时免费送出 Da Vinyl Box 采样包和 VHS Waves 插件</div><div class="cs">Midifan</div></div></a></div>
+<div class="c"><a href="https://www.midifan.com/modulenews-detailview-58288.htm" target="_blank"><div class="iw"><span class="bd">FREE</span><img src="https://image.midifan.com/data/attach/album/2026/0308/2599_1772902468_thumb.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="ph" style="display:none;background:#0ea5e9;color:#fff">限免福利：W.A. Production 送出贝斯效果插件 Fundamental Bass</div></div><div class="cb"><div class="ct">限免福利：W.A. Production 送出贝斯效果插件 Fundamental Bass</div><div class="cz">限免福利：W.A. Production 送出贝斯效果插件 Fundamental Bass</div><div class="cs">Midifan</div></div></a></div>
+<div class="c"><a href="https://www.midifan.com/modulenews-detailview-58286.htm" target="_blank"><div class="iw"><span class="bd">FREE</span><img src="https://image.midifan.com/data/attach/album/2026/0308/5942_1772977509_thumb.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="ph" style="display:none;background:#0ea5e9;color:#fff">福利：The Crow Hill Company 送出免费的稀有经典键盘贝斯音源 Icky Bass</div></div><div class="cb"><div class="ct">福利：The Crow Hill Company 送出免费的稀有经典键盘贝斯音源 Icky Bass</div><div class="cs">Midifan</div></div></a></div>
+<div class="c"><a href="https://www.midifan.com/modulenews-detailview-58260.htm" target="_blank"><div class="iw"><span class="bd">FREE</span><img src="https://image.midifan.com/data/attach/album/2026/0306/3789_1772794001_thumb.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="ph" style="display:none;background:#0ea5e9;color:#fff">限免福利：FedDSP 限时免费送出 Elegante 过载效果器插件</div></div><div class="cb"><div class="ct">限免福利：FedDSP 限时免费送出 Elegante 过载效果器插件</div><div class="cs">Midifan</div></div></a></div>
+</div>
+<div class="sec">News</div>
+<div class="g">
+<div class="c"><a href="https://www.asoundeffect.com/gdc26/" target="_blank"><div class="iw"><img src="https://www.asoundeffect.com/wp-content/uploads/2026/02/game-audio-gdc-2026_4.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="ph" style="display:none;background:#f97316;color:#fff">The Hardcore Guide to Game Audio GDC 2026: What to do, hear and see when it comes to sound for games at GDC</div></div><div class="cb"><div class="ct">The Hardcore Guide to Game Audio GDC 2026: What to do, hear and see when it comes to sound for games at GDC</div><div class="cz">GDC 2026 游戏音频硬核指南：在 GDC 上谈论游戏声音时该做什么、听什么、看什么</div><div class="cs">A Sound Effect</div></div></a></div>
+<div class="c"><a href="https://www.midifan.com/modulenews-detailview-58270.htm" target="_blank"><div class="iw"><img src="https://image.midifan.com/data/attach/album/2026/0306/7637_1772811334_thumb.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="ph" style="display:none;background:#0ea5e9;color:#fff">Techivation 发布 T-Compressor Mk2 压缩器插件</div></div><div class="cb"><div class="ct">Techivation 发布 T-Compressor Mk2 压缩器插件</div><div class="cz">Techivation 发布 T-Compressor Mk2 压缩器插件</div><div class="cs">Midifan</div></div></a></div>
+<div class="c"><a href="https://www.midifan.com/modulenews-detailview-58268.htm" target="_blank"><div class="iw"><img src="https://image.midifan.com/data/attach/album/2026/0306/2654_1772807073_thumb.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="ph" style="display:none;background:#0ea5e9;color:#fff">Native Instruments 发布 Massive X v1.7 版本更新：全面开放自动化参数并提升操作体验</div></div><div class="cb"><div class="ct">Native Instruments 发布 Massive X v1.7 版本更新：全面开放自动化参数并提升操作体验</div><div class="cs">Midifan</div></div></a></div>
+<div class="c"><a href="https://www.midifan.com/modulenews-detailview-58269.htm" target="_blank"><div class="iw"><img src="https://image.midifan.com/data/attach/album/2026/0306/7931_1772808316_thumb.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="ph" style="display:none;background:#0ea5e9;color:#fff">为鼓机注入采样灵魂：Elektron Syntakt 发布 1.40 重大固件更新</div></div><div class="cb"><div class="ct">为鼓机注入采样灵魂：Elektron Syntakt 发布 1.40 重大固件更新</div><div class="cs">Midifan</div></div></a></div>
+<div class="c"><a href="https://www.midifan.com/modulenews-detailview-58285.htm" target="_blank"><div class="iw"><img src="https://image.midifan.com/data/attach/album/2026/0307/4840_1772888779_thumb.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="ph" style="display:none;background:#0ea5e9;color:#fff">经典计算器解锁合成新玩法：Decent Samples 发布创意合成器插件 Equation Synth，还支持 Linux</div></div><div class="cb"><div class="ct">经典计算器解锁合成新玩法：Decent Samples 发布创意合成器插件 Equation Synth，还支持 Linux</div><div class="cs">Midifan</div></div></a></div>
+<div class="c"><a href="https://www.midifan.com/modulenews-detailview-58290.htm" target="_blank"><div class="iw"><img src="https://image.midifan.com/data/attach/album/2026/0308/1652_1772905801_thumb.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="ph" style="display:none;background:#0ea5e9;color:#fff">现场表演音色稳定终极设备：Strymon 推出两款高品质 DI 盒 PCH X1 和 PCH X2</div></div><div class="cb"><div class="ct">现场表演音色稳定终极设备：Strymon 推出两款高品质 DI 盒 PCH X1 和 PCH X2</div><div class="cs">Midifan</div></div></a></div>
+<div class="c"><a href="https://www.midifan.com/modulenews-detailview-58281.htm" target="_blank"><div class="iw"><img src="https://image.midifan.com/data/attach/album/2026/0308/3764_1772977930_thumb.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="ph" style="display:none;background:#0ea5e9;color:#fff">Andrew Huang 与 Love Hultén 联手打造定制款效果器 Refraction Engine</div></div><div class="cb"><div class="ct">Andrew Huang 与 Love Hultén 联手打造定制款效果器 Refraction Engine</div><div class="cz">Andrew Huang 与 Love Hultén 联手打造定制款效果器 Refraction Engine</div><div class="cs">Midifan</div></div></a></div>
+<div class="c"><a href="https://www.midifan.com/modulenews-detailview-58291.htm" target="_blank"><div class="iw"><img src="https://image.midifan.com/data/attach/album/2026/0308/6332_1772955409_thumb.png" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="ph" style="display:none;background:#0ea5e9;color:#fff">B 站大佬阿婆主一周精彩视频总汇（303）</div></div><div class="cb"><div class="ct">B 站大佬阿婆主一周精彩视频总汇（303）</div><div class="cs">Midifan</div></div></a></div>
+<div class="c"><a href="https://www.midifan.com/modulenews-detailview-58279.htm" target="_blank"><div class="iw"><img src="https://image.midifan.com/data/attach/album/2026/0307/9424_1772874392_thumb.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="ph" style="display:none;background:#0ea5e9;color:#fff">电动 MIDI 控制器 Roto-Control 开始支持 Max 编程环境</div></div><div class="cb"><div class="ct">电动 MIDI 控制器 Roto-Control 开始支持 Max 编程环境</div><div class="cs">Midifan</div></div></a></div>
+<div class="c"><a href="https://www.midifan.com/modulenews-detailview-58280.htm" target="_blank"><div class="iw"><img src="https://image.midifan.com/data/attach/album/2026/0307/1988_1772874272_thumb.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="ph" style="display:none;background:#0ea5e9;color:#fff">「Waves 已经成为一种通用语言」——Waves 现场产品闪耀 2026 格莱美颁奖典礼</div></div><div class="cb"><div class="ct">「Waves 已经成为一种通用语言」——Waves 现场产品闪耀 2026 格莱美颁奖典礼</div><div class="cs">Midifan</div></div></a></div>
+<div class="c"><a href="https://www.midifan.com/modulenews-detailview-58266.htm" target="_blank"><div class="iw"><img src="https://image.midifan.com/data/attach/album/2026/0306/7294_1772795372_thumb.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="ph" style="display:none;background:#0ea5e9;color:#fff">IK Multimedia 发布限量版 TONEX ONE Double Special Limited Edition 单块与配套软件</div></div><div class="cb"><div class="ct">IK Multimedia 发布限量版 TONEX ONE Double Special Limited Edition 单块与配套软件</div><div class="cz">IK Multimedia 发布限量版 TONEX ONE Double Special Limited Edition 单块与配套软件</div><div class="cs">Midifan</div></div></a></div>
+<div class="c"><a href="https://www.midifan.com/modulenews-detailview-58265.htm" target="_blank"><div class="iw"><img src="https://image.midifan.com/data/attach/album/2026/0306/2528_1772795715_thumb.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="ph" style="display:none;background:#0ea5e9;color:#fff">揭秘 ADAM Audio ART 高音单元手工制作过程</div></div><div class="cb"><div class="ct">揭秘 ADAM Audio ART 高音单元手工制作过程</div><div class="cs">Midifan</div></div></a></div>
+<div class="c"><a href="https://www.midifan.com/modulenews-detailview-58262.htm" target="_blank"><div class="iw"><img src="https://image.midifan.com/data/attach/album/2026/0306/1023_1772794249_thumb.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="ph" style="display:none;background:#0ea5e9;color:#fff">桌面的「双料王」ADAM Audio D3V 连获国际大奖</div></div><div class="cb"><div class="ct">桌面的「双料王」ADAM Audio D3V 连获国际大奖</div><div class="cs">Midifan</div></div></a></div>
+<div class="c"><a href="https://www.midifan.com/modulenews-detailview-58261.htm" target="_blank"><div class="iw"><img src="https://image.midifan.com/data/attach/album/2026/0306/9943_1772793989_thumb.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="ph" style="display:none;background:#0ea5e9;color:#fff">全新惊喜：UAD Custom 系列插件 Bundle 买 N 送 N，插件翻倍</div></div><div class="cb"><div class="ct">全新惊喜：UAD Custom 系列插件 Bundle 买 N 送 N，插件翻倍</div><div class="cs">Midifan</div></div></a></div>
+<div class="c"><a href="https://www.midifan.com/modulenews-detailview-58259.htm" target="_blank"><div class="iw"><img src="https://image.midifan.com/data/attach/album/2026/0306/8086_1772786196_thumb.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="ph" style="display:none;background:#0ea5e9;color:#fff">爱克创 TH-600 用户上手深度测评：国产电容麦，到底香不香？</div></div><div class="cb"><div class="ct">爱克创 TH-600 用户上手深度测评：国产电容麦，到底香不香？</div><div class="cs">Midifan</div></div></a></div>
+<div class="c"><a href="https://synthanatomy.com/2026/03/condukt-a-supercharged-midi-controller-app-with-smart-mapping-to-hardware-synths.html" target="_blank"><div class="iw"><img src="https://synthanatomy.com/wp-content/uploads/2026/03/Condukt.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="ph" style="display:none;background:#14b8a6;color:#fff">Condukt: a supercharged MIDI controller app with smart mapping to hardware synths</div></div><div class="cb"><div class="ct">Condukt: a supercharged MIDI controller app with smart mapping to hardware synths</div><div class="cz">Condukt：一款功能强大的 MIDI 控制器应用程序，具有到硬件合成器的智能映射</div><div class="cs">Synth Anatomy</div></div></a></div>
+<div class="c"><a href="https://synthanatomy.com/2026/03/mos-lab-e-mu-modular-system-a-clone-of-dave-rossums-modular-synth-synthfest-france-2021.html" target="_blank"><div class="iw"><img src="https://synthanatomy.com/wp-content/uploads/2021/06/Mos-Lab-E-Mu-System.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="ph" style="display:none;background:#14b8a6;color:#fff">Mos-Lab E-Mu Modular System is available now: a clone of Dave Rossum’s modular synth</div></div><div class="cb"><div class="ct">Mos-Lab E-Mu Modular System is available now: a clone of Dave Rossum’s modular synth</div><div class="cz">Mos-Lab E-Mu 模块化系统现已上市：Dave Rossum 模块化合成器的克隆</div><div class="cs">Synth Anatomy</div></div></a></div>
+</div>
+
+</div>
+<div id="tab-ai" class="tab-panel">
+<div class="sec">AI News</div>
+<div class="g">
+<div class="c"><a href="https://techcrunch.com/2026/03/08/will-the-pentagons-anthropic-controversy-scare-startups-away-from-defense-work/" target="_blank"><div class="iw"><img src="https://techcrunch.com/wp-content/uploads/2026/03/GettyImages-1461207630.jpg?resize=1200,857" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="ph" style="display:none;background:#0a9e01;color:#fff">Will the Pentagon’s Anthropic controversy scare startups away from defense work?</div></div><div class="cb"><div class="ct">Will the Pentagon’s Anthropic controversy scare startups away from defense work?</div><div class="cz">五角大楼的人择争议会吓跑初创公司远离国防工作吗？</div><div class="cs">TechCrunch AI</div></div></a></div>
+<div class="c"><a href="https://techcrunch.com/2026/03/08/owner-of-ice-detention-facility-sees-big-opportunity-in-ai-man-camps/" target="_blank"><div class="iw"><img src="https://techcrunch.com/wp-content/uploads/2026/03/GettyImages-2203455424.jpg?w=1024" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="ph" style="display:none;background:#0a9e01;color:#fff">Owner of ICE detention facility sees big opportunity in AI man camps</div></div><div class="cb"><div class="ct">Owner of ICE detention facility sees big opportunity in AI man camps</div><div class="cz">ICE 拘留设施所有者看到人工智能营地的巨大机遇</div><div class="cs">TechCrunch AI</div></div></a></div>
+<div class="c"><a href="https://techcrunch.com/2026/03/07/a-roadmap-for-ai-if-anyone-will-listen/" target="_blank"><div class="iw"><img src="https://techcrunch.com/wp-content/uploads/2026/03/GettyImages-871198558.jpg?resize=1200,772" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="ph" style="display:none;background:#0a9e01;color:#fff">A roadmap for AI, if anyone will listen</div></div><div class="cb"><div class="ct">A roadmap for AI, if anyone will listen</div><div class="cz">人工智能路线图，如果有人愿意听的话</div><div class="cs">TechCrunch AI</div></div></a></div>
+</div>
+
+</div>
+<button class="top-btn" id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
+<script>
+var b=document.getElementById('topBtn');
+window.onscroll=function(){b.style.display=window.scrollY>300?'flex':'none'};
+(function(){
+  var html=document.documentElement;
+  var saved=localStorage.getItem('theme');
+  if(saved)html.setAttribute('data-theme',saved);
+  else if(window.matchMedia('(prefers-color-scheme:dark)').matches)html.setAttribute('data-theme','dark');
+  var icon=document.getElementById('themeIcon');
+  if(icon)icon.textContent=(html.getAttribute('data-theme')==='dark')?'\ud83c\udf19':'\u2600\ufe0f';
+  window._toggleTheme=function(){
+    var cur=html.getAttribute('data-theme');
+    var next=cur==='dark'?'light':'dark';
+    if(next==='light')html.removeAttribute('data-theme');
+    else html.setAttribute('data-theme',next);
+    localStorage.setItem('theme',next);
+    document.getElementById('themeIcon').textContent=next==='dark'?'\ud83c\udf19':'\u2600\ufe0f';
+  };
+  window._switchTab=function(tab,btn){
+    document.querySelectorAll('.tab-panel').forEach(function(p){p.classList.remove('active')});
+    document.querySelectorAll('.tabs button').forEach(function(b){b.classList.remove('active')});
+    document.getElementById('tab-'+tab).classList.add('active');
+    btn.classList.add('active');
+    localStorage.setItem('activeTab',tab);
+    window.scrollTo({top:0});
+  };
+  var savedTab=localStorage.getItem('activeTab');
+  if(savedTab&&document.getElementById('tab-'+savedTab)){
+    var btns=document.querySelectorAll('.tabs button');
+    btns.forEach(function(b){b.classList.remove('active');if(b.textContent.toLowerCase()===savedTab)b.classList.add('active')});
+    document.querySelectorAll('.tab-panel').forEach(function(p){p.classList.remove('active')});
+    document.getElementById('tab-'+savedTab).classList.add('active');
+  }
+})();
+</script>
+</body>
+</html>
